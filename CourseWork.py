@@ -53,7 +53,7 @@ def keywordSearch():
                     print(len(searchResults))
 
     if len(searchResults) == 0:
-        print("Error:\nNo results match \"" + searchTerm +"\"") #If the searchResults list is empty then an error message is outputted
+        print("Error:\nNo results match \nTry with a valid value \"" + searchTerm +"\"") #If the searchResults list is empty then an error message is outputted
 
 
 
