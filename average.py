@@ -3,6 +3,7 @@ import csv
 import math
 import matplotlib.pyplot as plt
 import matplotlib.patches as mpatches
+import numpy as np
 #Read Dataset from file
 dataSet=pd.read_csv("dataset.csv")
 #Load Data
@@ -100,3 +101,9 @@ avgModerate=(totalModerate*100)/len(adaptivityLevel)
 avgHigh=100-avgLow-avgModerate
 #####################OUTPUT
 print(avgIt,avgNoIt,avgGov,avgNonGov,avgBoy,avgGirl,avgCollege,avgUniversity,avgSchool,avgMobileData,avgWifi,avg3G,avg4G,avgHigh,avgLow,avgModerate)
+###PIE CHART
+print("AVg Boy",avgBoy)
+ResultNames=["Boy","Girl"]
+ResultValues=np.array[avgBoy,avgGirl]
+plt.pie(ResultValues,labels=ResultNames)
+plt.show()
