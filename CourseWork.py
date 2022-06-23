@@ -10,7 +10,6 @@ gender=dataSet["Gender"]
 educationLevel=dataSet["Education Level"]
 institution=dataSet["Institution Type"]
 itStudent=dataSet["IT Student"]
-loadShedding=dataSet["Load-shedding"]
 internetType=dataSet["Internet Type"]
 networkType=dataSet["Network Type"]
 device=dataSet["Device"]
@@ -19,7 +18,7 @@ adaptivityLevel=dataSet["Adaptivity Level"]
 ##
 ###
 ####
-def menu(gender,educationLevel,institution,itStudent,loadShedding,internetType,networkType,device,adaptivityLevel):
+def menu(gender,educationLevel,institution,itStudent,internetType,networkType,device,adaptivityLevel):
     repeat=True
     selectMenu=input()
     if selectMenu=="1":
@@ -43,7 +42,7 @@ def keywordSearch():
             data.append(row)
     searchTerm=input() 
     print(len(data))
-    for i in range(0,(len(row) - 1)):#Used to only search the columns that contain searchable data.
+    for i in range(0,(len(row))):#Used to only search the columns that contain searchable data.
         column = [x[i] for x in data]
         if searchTerm in column:
             for x in range(0,len(data)):
@@ -74,4 +73,4 @@ def averages():
 #
 #
 #####################################################
-menu(gender,educationLevel,institution,itStudent,loadShedding,internetType,networkType,device,adaptivityLevel)
+menu(gender,educationLevel,institution,itStudent,internetType,networkType,device,adaptivityLevel)
