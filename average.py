@@ -100,10 +100,39 @@ avgLow=(totalLow*100)/len(adaptivityLevel)
 avgModerate=(totalModerate*100)/len(adaptivityLevel)
 avgHigh=100-avgLow-avgModerate
 #####################OUTPUT
-print(avgIt,avgNoIt,avgGov,avgNonGov,avgBoy,avgGirl,avgCollege,avgUniversity,avgSchool,avgMobileData,avgWifi,avg3G,avg4G,avgHigh,avgLow,avgModerate)
+print(avgIt,avgNoIt,avgBoy,avgGirl,avgCollege,avgUniversity,avgSchool,avgMobileData,avgWifi,avg3G,avg4G,avgHigh,avgLow,avgModerate)
 ###PIE CHART
-print("AVg Boy",avgBoy)
-ResultNames=["Boy","Girl"]
-ResultValues=np.array[avgBoy,avgGirl]
-plt.pie(ResultValues,labels=ResultNames)
+print("AVg Boy")
+GenderNames=["Boy","Girl"]
+GenderValues=np.array([avgBoy,avgGirl])
+EduNames=["School","College","University"]
+EduValues=np.array([avgSchool,avgCollege,avgUniversity])
+InstitutionNames=["Government","Non Government"]
+InstitutionValues=np.array([avgGov,avgNonGov])
+ItStatus=["Yes","No"]
+ItValues=np.array([avgIt,avgNoIt])
+InternetNames=["Mobile Data","Wifi"]
+InternetValues=np.array([avgMobileData,avgWifi])
+NetworkNames=["3G","4G"]
+NetworkValues=np.array([avg3G,avg4G])
+adapLvlnames=["High","Moderate","Low"]
+adapValues=np.array([avgHigh,avgModerate,avgLow])
+#plt.pie(ResultValues,labels=ResultNames)
+#plt.show()
+fig,axs=plt.subplots(2,4)
+axs[0][0].set_title("GENDER")
+axs[0][0].pie(GenderValues,labels=GenderNames)
+axs[0][1].set_title("EDUCATION LEVEL")
+axs[0][1].pie(EduValues,labels=EduNames)
+axs[0][2].set_title("INSTITUTION LEVEL")
+axs[0][2].pie(InstitutionValues,labels=InstitutionNames)
+axs[0][3].set_title("IT STUDENT")
+axs[0][3].pie(ItValues,labels=ItStatus)
+axs[1][0].set_title("INTERNET TYPE")
+axs[1][0].pie(InternetValues,labels=InternetNames)
+axs[1][1].set_title("NETWORK TYPE")
+axs[1][1].pie(NetworkValues,labels=NetworkNames)
+axs[1][2].set_title("ADAPTIVITY LEVEL")
+axs[1][2].pie(adapValues,labels=adapLvlnames)
+axs[1][3].set_visible(False)
 plt.show()
