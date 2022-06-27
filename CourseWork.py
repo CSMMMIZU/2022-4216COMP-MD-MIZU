@@ -12,13 +12,12 @@ institution=dataSet["Institution Type"]
 itStudent=dataSet["IT Student"]
 internetType=dataSet["Internet Type"]
 networkType=dataSet["Network Type"]
-device=dataSet["Device"]
 adaptivityLevel=dataSet["Adaptivity Level"]
 #Menu#
 ##
 ###
 ####
-def menu(gender,educationLevel,institution,itStudent,internetType,networkType,device,adaptivityLevel):
+def menu(gender,educationLevel,institution,itStudent,internetType,networkType,adaptivityLevel):
     repeat=True
     selectMenu=input()
     if selectMenu=="1":
@@ -73,4 +72,4 @@ def averages():
 #
 #
 #####################################################
-menu(gender,educationLevel,institution,itStudent,internetType,networkType,device,adaptivityLevel)
+menu(gender,educationLevel,institution,itStudent,internetType,networkType,adaptivityLevel)
