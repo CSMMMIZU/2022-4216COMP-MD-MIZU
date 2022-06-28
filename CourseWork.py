@@ -5,7 +5,7 @@ import matplotlib.pyplot as plt
 import matplotlib.patches as mpatches
 #Read Dataset from file
 dataSet=pd.read_csv("dataset.csv")
-#Load Data
+#Load Data by each column
 gender=dataSet["Gender"]
 educationLevel=dataSet["Education Level"]
 institution=dataSet["Institution Type"]
@@ -51,7 +51,7 @@ def keywordSearch():
                     print(len(searchResults))
 
     if len(searchResults) == 0:
-        print("Error:\nNo results match \nTry with a valid value \"" + searchTerm +"\"") #If the searchResults list is empty then an error message is outputted
+        print("Error in Search:\nNo result match with the dataset \nTry with a valid value which would match with the data set \"" + searchTerm +"\"") #If the searchResults list is empty then an error message is outputted
 
 
 
