@@ -10,4 +10,3 @@ mylabels = ["Apples", "Bananas", "Cherries", "Dates"]
 
 plt.pie(y, labels = mylabels)
 plt.show() 
-print("num1",num1)
